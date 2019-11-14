@@ -42,37 +42,4 @@ struct User: Codable {
     var following: Int?
     var created_at: String?
     var updated_at: String?
-    
-//    private enum CodingKeys: String, CodingKey {
-//        case pid = "id"
-//        case login
-//        case node_id
-//        case avatar_url
-//        case gravatar_id
-//        case url
-//        case html_url
-//        case followers_url
-//        case following_url
-//        case gists_url
-//        case starred_url
-//        case subscriptions_url
-//        case organizations_url
-//        case repos_url
-//        case events_url
-//        case received_events_url
-//        case type
-//        case site_admin
-//        case name
-//        case blog
-//        case location
-//        case email
-//        case hireable
-//        case bio
-//        case public_repos
-//        case public_gists
-//        case followers
-//        case following
-//        case created_at
-//        case updated_at
-//    }
 }
