@@ -48,18 +48,18 @@ class ResumeTableViewController: UITableViewController {
     private let reposReq = ReposRequest()
 
     private func initilizeData() {
-        
+        reposWithLang = 0
+        user = nil
+        repos = []
+        langs = [:]
+        pages = 0
+        page = 0
     }
     
     @objc private func refreshData(_ sender: Any) {
         acntname = UserDefaults.standard.string(forKey: "AccountName")
+        initilizeData()
         if let accountname = acntname {
-            reposWithLang = 0
-            user = nil
-            repos = []
-            langs = [:]
-            pages = 0
-            page = 0
             userReq.get(accountname) { (user, error) in
                 if error == nil {
                     self.user = user
