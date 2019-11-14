@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate {
+   
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -17,6 +18,13 @@ class MainViewController: UIViewController {
         if let accountname = (sender as? UITextField)?.text {
             UserDefaults.standard.set(accountname, forKey: "AccountName")
         }
+    }
+    @IBAction func textFieldPrimaryActionTriggered(_ sender: Any) {
+        performSegue(withIdentifier: "ShowResume", sender: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
     }
 }
 

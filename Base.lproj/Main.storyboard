@@ -40,7 +40,7 @@
                                         <rect key="frame" x="8" y="90" width="358" height="30"/>
                                         <state key="normal" title="generate now &gt;"/>
                                         <connections>
-                                            <segue destination="blv-AC-50l" kind="show" id="OlN-qg-vBl"/>
+                                            <segue destination="blv-AC-50l" kind="show" identifier="ShowResume" id="OlN-qg-vBl"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eneter github account name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSY-uT-3gQ">
@@ -49,9 +49,11 @@
                                             <constraint firstAttribute="height" constant="34" id="efE-1T-5eM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" textContentType="nickname"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="nickname"/>
                                         <connections>
                                             <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Opd-4k-ap9"/>
+                                            <action selector="textFieldPrimaryActionTriggered:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="m3A-1r-tRR"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="R3u-ON-HEM"/>
                                         </connections>
                                     </textField>
                                 </subviews>
